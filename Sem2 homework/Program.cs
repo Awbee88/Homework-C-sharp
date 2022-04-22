@@ -79,3 +79,32 @@ void DayNum()
 DayNum();
 
 */
+
+
+Console.Write("Input integer number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+void ThirdNum()
+{
+    if(num<100)
+    {
+        Console.Write("Your number does not have a third digit");
+    }
+    else if(num>99 && num<1000)
+    {
+        int cutNum = num % 10;
+        Console.Write(num + " -> " + cutNum);
+    }
+    else if(num>999)
+    {
+        int temp = num;
+        while(temp>999)
+        {
+            int cutNum2 = temp/10;
+            temp = cutNum2;
+        }
+        int cutNum3 = temp%10;
+        Console.Write(num + " -> " + cutNum3);
+    }
+}
+ThirdNum();
